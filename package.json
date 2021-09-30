@@ -1,0 +1,73 @@
+{
+  "name": "@data-list/react-provider",
+  "version": "0.0.1-beta",
+  "description": "OBT",
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "jsnext:main": "dist/index.es.js",
+  "typings": "dist/index",
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=8",
+    "npm": ">=5",
+    "typescript": ">=4"
+  },
+  "scripts": {
+    "dev": "rollup -c -ww",
+    "build": "rollup -c",
+    "test": "npm run prettier-root && npm run prettier-source && npm run eslint-root && npm run eslint-source && npm run jest",
+    "test:autofix": "npm run prettier:autofix && npm run eslint:autofix && npm run jest:coverage",
+    "----------------------------------------------- TEST-INNER": "SECTION",
+    "prettier-root": "prettier \"./*.{ts,tsx,js,jsx,json,md}\" --check",
+    "prettier-source": "prettier \"./{docs,src}/**/*.{ts,tsx,js,jsx,json,md}\" --check",
+    "prettier:autofix": "npm run prettier-root -- --write && npm run prettier-source -- --write",
+    "eslint-root": "eslint \"./*.js\" --cache --cache-location ./.cache/eslint/root",
+    "eslint-source": "eslint \"./{libs,pages,src}/**/**.{js,ts,tsx}\" --cache --cache-location ./.cache/eslint/source",
+    "eslint:autofix": "npm run eslint-root -- --fix && npm run eslint-source -- --fix",
+    "jest": "jest --passWithNoTests",
+    "jest:coverage": "npm run jest -- --coverage --collectCoverageFrom=\"./src/**/*.{ts,tsx,js}\" && istanbul-badges-readme"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/data-list/react-provider.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/data-list/react-provider/issues"
+  },
+  "homepage": "https://github.com/data-list/react-provider#readme",
+  "peerDependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.15.7",
+    "@types/jest": "^27.0.2",
+    "@types/react": "^17.0.26",
+    "@types/react-dom": "^17.0.9",
+    "@wezom/eslint-config": "^8.0.0",
+    "@wezom/eslint-config-ts": "^8.0.0",
+    "@wezom/eslint-config-ts-react": "^8.0.0",
+    "@wezom/toolkit-jest": "^3.3.0",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-jest": "^24.5.0",
+    "istanbul-badges-readme": "^1.4.0",
+    "jest": "^27.2.4",
+    "prettier": "^2.4.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "rollup": "^2.57.0",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-typescript2": "^0.30.0",
+    "ts-jest": "^27.0.5",
+    "typescript": "^4.4.3"
+  }
+}
