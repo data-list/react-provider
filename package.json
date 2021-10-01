@@ -1,6 +1,6 @@
 {
   "name": "@data-list/react-provider",
-  "version": "0.0.1-beta",
+  "version": "0.0.1",
   "description": "OBT",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
@@ -33,9 +33,17 @@
     "type": "git",
     "url": "git+https://github.com/data-list/react-provider.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "license": "BSD-3-Clause",
+  "author": {
+    "name": "Oleg Dutchenko",
+    "email": "dutchenko.o.dev@gmail.com"
+  },
+  "keywords": [
+    "data-list"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
   "bugs": {
     "url": "https://github.com/data-list/react-provider/issues"
   },

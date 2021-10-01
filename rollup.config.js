@@ -9,18 +9,21 @@ export default {
 	input: 'src/index.ts',
 	output: [
 		{
-			file: pkg.main,
+			// file: pkg.main,
+			dir: './dist/',
 			format: 'cjs',
 			exports: 'named',
 			sourcemap: true
 		},
 		{
-			file: pkg.module,
+			dir: './dist',
 			format: 'es',
 			exports: 'named',
-			sourcemap: true
+			sourcemap: true,
+			entryFileNames: '[name].es.js'
 		}
 	],
+	preserveModules: true,
 	plugins: [
 		external(),
 		resolve(),
